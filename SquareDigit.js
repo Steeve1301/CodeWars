@@ -5,16 +5,6 @@
 // Note: The function accepts an integer and returns an integer
 
 function squareDigits(num){
-
-    let newNum= num.toString().split('');
-    let result= [];
-    
-    for(let i=0;i<newNum.length;i++){
-      result.push(newNum[i]*newNum[i]);
-    }
-    
-    result= result.join("");
-    
-    
-    return parseInt(result);  
-  }
+  //may the code be with you
+  return Number(num.toString().split('').map(x=>x*x).join(''));
+}
