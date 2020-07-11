@@ -2,22 +2,8 @@
 
 function findOutlier(integers){
     //your code here
-    let newIntegers= integers;
-    let odd= [];
-    let even= [];
-    
-    for(let i=0;i<newIntegers.length;i++){
-      
-      if(newIntegers[i]%2===0){
-        even.push(newIntegers[i]);
-      }
-      else if(newIntegers[i]%2!=0){
-        odd.push(newIntegers[i]);
-      }
-      
-    }
-    
-    return (odd.length>1) ? even[0] 
-          : (even.length>1) ? odd[0]
-          : NaN;
+    let even= integers.filter(x => x%2==0);
+    let odd= integers.filter(x => x%2!==0);
+
+    return (even.length==1)? even[0] : odd[0];
   }
